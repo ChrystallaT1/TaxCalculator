@@ -23,7 +23,7 @@ def calcTax():
     a = float(data["a"])
     b = float(data["b"])
 
-    if a < 0:
+    if a < 0 or b < 0:
       return jsonify({"error2": "Please provide positive income"}), 400
   
     if b < 1000:
